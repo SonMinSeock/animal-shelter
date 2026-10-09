@@ -19,7 +19,37 @@
   </head>
   <body>
     <header class="header">
-      <!-- Logo & Navigation -->
+      <div class="container header-inner">
+        <!-- Logo -->
+        <a href="#home" class="header-logo">
+          <span class="logo-en">FAMILY</span>
+          <span class="logo-ko">동물보호센터</span>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="header-nav" id="primary-navigation" aria-label="주 메뉴">
+          <ul class="nav-list">
+            <li><a href="#about">센터 소개</a></li>
+            <li><a href="#activities">주요 활동</a></li>
+            <li><a href="#animals">보호 동물</a></li>
+            <li><a href="#adoption">입양 안내</a></li>
+            <li><a href="#contact">지부 안내</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="메뉴 열기"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <!-- Main -->
