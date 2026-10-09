@@ -1,0 +1,70 @@
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Global */
+body {
+  min-height: 100vh;
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+/* Media */
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form Elements */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  width: calc(100% - 40px);
+  max-width: var(--container-width);
+  margin-inline: auto;
+}
+
+/* Section */
+main section {
+  padding-block: 96px;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Section Description */
+.section-description {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}

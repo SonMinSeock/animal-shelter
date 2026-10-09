@@ -1,0 +1,25 @@
+/* Tablet (768px ~ 1023px) */
+@media (max-width: 1023px) {
+  main section {
+    padding-block: 80px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+/* Mobile (767px 이하) */
+@media (max-width: 767px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  main section {
+    padding-block: 64px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
