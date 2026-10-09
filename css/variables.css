@@ -1,0 +1,37 @@
+:root {
+  /* Primary */
+  --color-primary: #005a9e;
+  --color-primary-hover: #004578;
+
+  /* Secondary */
+  --color-secondary: #4a9dd9;
+
+  /* Background */
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eff7fc;
+
+  /* Text */
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #64748b;
+
+  /* Border */
+  --color-border: #e2e8f0;
+
+  /* Footer */
+  --color-footer: #003b66;
+
+  /* Typography */
+  --font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Transition */
+  --transition-default: 0.2s ease;
+}
