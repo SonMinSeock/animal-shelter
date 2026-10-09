@@ -1,5 +1,8 @@
-/* Tablet (768px ~ 1023px) */
+/* ========================================
+   Tablet (768px ~ 1023px)
+======================================== */
 @media (max-width: 1023px) {
+  /* Common */
   main section {
     padding-block: 80px;
   }
@@ -9,8 +12,11 @@
   }
 }
 
-/* Mobile (767px 이하) */
+/* ========================================
+   Mobile (767px 이하)
+======================================== */
 @media (max-width: 767px) {
+  /* Common */
   .container {
     width: calc(100% - 32px);
   }
@@ -21,5 +27,148 @@
 
   .section-title {
     font-size: 28px;
+  }
+
+  /* Header */
+  .header {
+    height: 64px;
+  }
+
+  /* Header Logo */
+  .header-logo {
+    gap: 8px;
+  }
+
+  .logo-en {
+    font-size: 26px;
+  }
+
+  .logo-ko {
+    font-size: 14px;
+  }
+
+  /* Navigation */
+  .header-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+  /* Navigation Open */
+  .header-nav.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Navigation List */
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 16px;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 14px 8px;
+  }
+
+  .nav-list a:hover {
+    background-color: var(--color-surface-alt);
+  }
+
+  /* Mobile Menu Button */
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  /* Hamburger Icon */
+  .menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+
+    background-color: var(--color-text-primary);
+    border-radius: 2px;
+
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  /* Hamburger → X */
+  .menu-toggle[aria-expanded='true'] span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle[aria-expanded='true'] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle[aria-expanded='true'] span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Fixed Header Offset */
+  main {
+    padding-top: 64px;
+  }
+
+  html {
+    scroll-padding-top: 64px;
+  }
+}
+
+/* ========================================
+   Small Mobile (359px 이하)
+======================================== */
+@media (max-width: 359px) {
+  .header-logo {
+    gap: 5px;
+  }
+
+  .logo-en {
+    font-size: 22px;
+  }
+
+  .logo-ko {
+    font-size: 12px;
+  }
+}
+
+/* ========================================
+   Accessibility
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+  .header-nav,
+  .menu-toggle span {
+    transition: none;
   }
 }
